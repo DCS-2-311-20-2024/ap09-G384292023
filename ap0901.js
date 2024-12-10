@@ -1,5 +1,5 @@
 //
-// 応用プログラミング 第6回 課題2 (ap0602.js)
+// 応用プログラミング 第9回 自由課題 (ap0901.js)
 //  G384292023 金尾駿太郎
 // $Id$
 //
@@ -98,24 +98,10 @@ function init() {
     scene.add(light);
   }
   { // ポイントライト
-    /*const light = new THREE.PointLight(0xffffff, 500);
+    const light = new THREE.PointLight(0xffffff, 500);
     light.position.set(0, 2, 5);
-    scene.add(light);*/
+    scene.add(light);
   }
-  // 証明ライト
-  {
-    const pointLight = new THREE.DirectionalLight(0xffffff, 10, 0.1);
-    pointLight.position.set(5, 4, -1.9)
-    pointLight.rotation.z = Math.PI / 2;
-    scene.add(pointLight);
-    const lightMatrial = new THREE.MeshStandardMaterial({ color: "white" });
-    const ligth = new THREE.Mesh(
-      new THREE.SphereGeometry(0.1, 6, 6), lightMatrial);
-    ligth.position.copy(pointLight.position);
-    scene.add(ligth);
-  }
-
-  // 3D物体
   // スクリーン
   const screen = new THREE.Mesh(
     new THREE.PlaneGeometry(25, 10),
